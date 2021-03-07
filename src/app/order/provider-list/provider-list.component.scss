@@ -1,0 +1,21 @@
+:host {
+    background: inherit;
+}
+  
+.provider-grid {
+    background: inherit;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+    .card {
+        color: #0f0f0f;
+        display: grid;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+}

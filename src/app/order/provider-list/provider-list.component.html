@@ -1,0 +1,7 @@
+<div class="provider-grid">
+    <div class="glass-card card" *ngFor="let p of providers">
+        <h2>{{p.name}}</h2>
+        <p>{{p.description}}</p>
+        <button mat-raised-button color="accent" (click)="showMenuDialog(p.id)">Feed Me!</button>
+    </div>
+</div>
