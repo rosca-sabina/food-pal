@@ -24,7 +24,6 @@ export class ProviderListComponent implements OnInit, AfterViewInit {
   }
 
   showMenuDialog(providerId){
-    console.log(providerId);
     this.dialog.open(ProviderCatalogueComponent, {
       data: {
         providerId: providerId

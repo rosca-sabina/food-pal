@@ -18,16 +18,13 @@ export class ProviderCatalogueComponent implements OnInit, AfterViewInit {
   menuColumns: string[] = ['id', 'name', 'price'];
   dataSource: MatTableDataSource<CatalogueItem> = new MatTableDataSource<CatalogueItem>();
 
-  constructor(private providersService: ProvidersService, @Inject(MAT_DIALOG_DATA) public data: ProviderCatalogueDialogData) { 
-    console.log(data);
-  }
+  constructor(private providersService: ProvidersService, @Inject(MAT_DIALOG_DATA) public data: ProviderCatalogueDialogData) {}
 
   ngOnInit(): void {
   }
 
   ngAfterViewInit(): void {
     this.providersService.getProviderById(this.data.providerId, true).subscribe((data) => {
-      console.log(data);
       this.menuItems = data.catalogue.items;
       this.menuTitle = data.catalogue.description;
       this.dataSource = new MatTableDataSource<CatalogueItem>(this.menuItems);
